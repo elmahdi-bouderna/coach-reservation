@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "./static/css/main.9b1eac1a.css",
-    "main.js": "./static/js/main.8899704a.js",
-    "index.html": "./index.html"
+    "main.css": "/coach-reservation/static/css/main.9b1eac1a.css",
+    "main.js": "/coach-reservation/static/js/main.a507c547.js",
+    "index.html": "/coach-reservation/index.html"
   },
   "entrypoints": [
     "static/css/main.9b1eac1a.css",
-    "static/js/main.8899704a.js"
+    "static/js/main.a507c547.js"
   ]
 }
