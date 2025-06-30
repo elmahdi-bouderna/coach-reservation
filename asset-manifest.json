@@ -1,13 +1,11 @@
 {
   "files": {
-    "main.css": "/coach-reservation/static/css/main.e2b2bf75.css",
-    "main.js": "/coach-reservation/static/js/main.f1497f11.js",
-    "index.html": "/coach-reservation/index.html",
-    "main.e2b2bf75.css.map": "/coach-reservation/static/css/main.e2b2bf75.css.map",
-    "main.f1497f11.js.map": "/coach-reservation/static/js/main.f1497f11.js.map"
+    "main.css": "./static/css/main.9b1eac1a.css",
+    "main.js": "./static/js/main.8899704a.js",
+    "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.e2b2bf75.css",
-    "static/js/main.f1497f11.js"
+    "static/css/main.9b1eac1a.css",
+    "static/js/main.8899704a.js"
   ]
 }
