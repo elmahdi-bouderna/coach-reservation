@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Type Debug Test</title>
+</head>
+<body>
+    <h1>Session Type Debug Test</h1>
+    
+    <div>
+        <h2>Test 1: Direct API Calls</h2>
+        <button onclick="testNormal()">Test Normal Session API</button>
+        <button onclick="testBilan()">Test Bilan Session API</button>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        async function testNormal() {
+            console.log('🔍 Testing NORMAL session API call...');
+            try {
+                const response = await fetch('/api/coaches/1/availability?session_type=normal');
+                const data = await response.json();
+                console.log('Normal session response:', data);
+                
+                document.getElementById('results').innerHTML = `
+                    <h3>Normal Session Results:</h3>
+                    <p>Found ${data.length} slots</p>
+                    <pre>${JSON.stringify(data.slice(0, 3), null, 2)}</pre>
+                `;
+                
+                // Check session types
+                const sessionTypes = [...new Set(data.map(slot => slot.session_type))];
+                console.log('Session types in normal response:', sessionTypes);
+                
+            } catch (error) {
+                console.error('Error testing normal:', error);
+            }
+        }
+        
+        async function testBilan() {
+            console.log('🔍 Testing BILAN session API call...');
+            try {
+                const response = await fetch('/api/coaches/1/availability?session_type=bilan');
+                const data = await response.json();
+                console.log('Bilan session response:', data);
+                
+                document.getElementById('results').innerHTML = `
+                    <h3>Bilan Session Results:</h3>
+                    <p>Found ${data.length} slots</p>
+                    <pre>${JSON.stringify(data.slice(0, 3), null, 2)}</pre>
+                `;
+                
+                // Check session types
+                const sessionTypes = [...new Set(data.map(slot => slot.session_type))];
+                console.log('Session types in bilan response:', sessionTypes);
+                
+            } catch (error) {
+                console.error('Error testing bilan:', error);
+            }
+        }
+    </script>
+</body>
+</html>
