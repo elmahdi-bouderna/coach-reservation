@@ -1,15 +1,4 @@
 {
-  "framework": "create-react-app",
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "installCommand": "npm install",
-  "env": {
-    "REACT_APP_API_URL": "https://coachreservation-0caad91c51ab.herokuapp.com/api",
-    "GENERATE_SOURCEMAP": "false",
-    "PUBLIC_URL": "/",
-    "BUILD_PATH": "build",
-    "INLINE_RUNTIME_CHUNK": "false"
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
